@@ -18,8 +18,17 @@ public class ModItems {
             () -> new Item (new Item.Properties()));
 
 
+    //Custom Items
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             () -> new MetalDetectorItem(new Item.Properties()));
+
+
+    //Food Items
+    public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)));
+
+    public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.COFFEE_DRINK)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

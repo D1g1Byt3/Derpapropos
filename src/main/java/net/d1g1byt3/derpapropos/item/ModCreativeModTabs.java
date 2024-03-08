@@ -19,7 +19,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DerpAproposMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> DERPAPROPO_TAB = CREATIVE_MODE_TABS.register("derpapropos_tab",
+    public static final RegistryObject<CreativeModeTab> DERPAPROPOS_TAB = CREATIVE_MODE_TABS.register("derpapropos_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
                     .title(Component.translatable("creativetab.derpapropos_tab"))
                     .displayItems((displayParameters, output) -> {
@@ -29,8 +29,6 @@ public class ModCreativeModTabs {
                                     .map(RegistryObject::get).toList();
                             for (Item item : items) {
                                 output.accept(item);
-                                //event.accept(ModItems.ALEXANDRITE);
-                                //event.accept(ModItems.RAW_ALEXANDRITE);
                             }
                         }
 

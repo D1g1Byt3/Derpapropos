@@ -1,11 +1,13 @@
 {
-  "creativetab.derpapropos_tab": "Derpapropos Tab",
+  "creativetab.derpapropos_tab": "Derpapropos",
 
   "item.derpapropos.metal_detector.no_valuables": "No Valuables Found!",
   "item.derpapropos.metal_detector": "Metal Detector",
 
   "item.derpapropos.alexandrite": "Alexandrite",
   "item.derpapropos.raw_alexandrite": "Raw Alexandrite",
+  "item.derpapropos.kohlrabi": "Kohlrabi",
+  "item.derpapropos.coffee_drink": "Coffee Drink",
 
   "block.derpapropos.alexandrite_block": "Block of Alexandrite",
   "block.derpapropos.raw_alexandrite_block": "Block of Raw Alexandrite",
