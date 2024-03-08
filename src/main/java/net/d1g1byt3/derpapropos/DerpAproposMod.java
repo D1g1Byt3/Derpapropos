@@ -1,10 +1,13 @@
 package net.d1g1byt3.derpapropos;
 
 import com.mojang.logging.LogUtils;
+import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -37,7 +40,10 @@ public class DerpAproposMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -60,18 +66,28 @@ public class DerpAproposMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+       /* if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             List<Item> items = ModItems.ITEMS.getEntries()
                     .stream()
                     .map(RegistryObject::get).toList();
-            for (Item item : items){
+            for (Item item : items) {
                 event.accept(item);
+                //event.accept(ModItems.ALEXANDRITE);
+                //event.accept(ModItems.RAW_ALEXANDRITE);
             }
-
-            //event.accept(ModItems.ALEXANDRITE);
-            //event.accept(ModItems.RAW_ALEXANDRITE);
         }
-    }
+
+
+            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+                List<Block> blocks = ModBlocks.BLOCKS.getEntries()
+                        .stream()
+                        .map(RegistryObject::get).toList();
+                for (Block block : blocks) {
+                    event.accept(block);
+                }
+            }
+            */
+        }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

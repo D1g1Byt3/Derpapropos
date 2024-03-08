@@ -1,4 +1,10 @@
 {
+  "creativetab.derpapropos_tab": "Derpapropos Tab",
+
   "item.derpapropos.alexandrite": "Alexandrite",
-  "item.derpapropos.raw_alexandrite": "Raw Alexandrite"
+  "item.derpapropos.raw_alexandrite": "Raw Alexandrite",
+
+  "block.derpapropos.alexandrite_block": "Block of Alexandrite",
+  "block.derpapropos.raw_alexandrite_block": "Block of Raw Alexandrite"
+
 }
