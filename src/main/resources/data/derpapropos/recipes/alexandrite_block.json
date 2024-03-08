@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern":[
+  "AAA",
+  "AAA",
+  "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "derpapropos:alexandrite"
+    }
+  },
+  "result": {
+    "item": "derpapropos:alexandrite_block"
+  }
+}

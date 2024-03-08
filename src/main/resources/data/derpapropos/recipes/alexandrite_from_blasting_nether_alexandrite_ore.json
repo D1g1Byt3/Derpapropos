@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "group": "alexandrite",
+  "ingredient": {
+    "item": "derpapropos:nether_alexandrite_ore"
+  },
+  "result": "derpapropos:alexandrite"
+}
