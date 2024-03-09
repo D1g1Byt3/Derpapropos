@@ -1,8 +1,8 @@
 {
   "creativetab.derpapropos_tab": "Derpapropos",
 
-  "item.derpapropos.metal_detector.no_valuables": "No Valuables Found!",
-  "item.derpapropos.metal_detector": "Metal Detector",
+  "item.derpapropos.ore_detector.no_valuables": "No Valuables Found!",
+  "item.derpapropos.ore_detector": "Ore Detector",
   "item.derpapropos.peat_brick": "Peat Brick",
 
   "item.derpapropos.alexandrite": "Alexandrite",
@@ -17,6 +17,11 @@
   "block.derpapropos.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
   "block.derpapropos.nether_alexandrite_ore": "Nether Alexandrite Ore",
 
-  "block.derpapropos.sound_block": "Sound Block"
+  "block.derpapropos.sound_block": "Sound Block",
+
+  "tooltip.derpapropos.ore_detector.tooltip.shift": "Right Click to Find Valuables!",
+  "tooltip.derpapropos.ore_detector.tooltip": "Hold §eShift§r for More Info",
+  "tooltip.derpapropos.sound_block.tooltip": "Hold §eShift§r for More Info",
+  "tooltip.derpapropos.sound_block.tooltip.shift": "Plays sound on walking, and right clicking"
 
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-  "layer0": "derpapropos:item/metal_detector"
+  "layer0": "derpapropos:item/ore_detector"
   }
 }
