@@ -39,10 +39,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.ALEXANDRITE_BLOCK.get(),
-                        ModBlocks.ALEXANDRITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
-                        ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get(),
+                        ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
     }
 
     @Override
