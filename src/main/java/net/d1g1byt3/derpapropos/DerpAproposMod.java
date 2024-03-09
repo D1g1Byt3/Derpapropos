@@ -58,28 +58,8 @@ public class DerpAproposMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-       /* if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            List<Item> items = ModItems.ITEMS.getEntries()
-                    .stream()
-                    .map(RegistryObject::get).toList();
-            for (Item item : items) {
-                event.accept(item);
-                //event.accept(ModItems.ALEXANDRITE);
-                //event.accept(ModItems.RAW_ALEXANDRITE);
-            }
-        }
 
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-                List<Block> blocks = ModBlocks.BLOCKS.getEntries()
-                        .stream()
-                        .map(RegistryObject::get).toList();
-                for (Block block : blocks) {
-                    event.accept(block);
-                }
-            }
-            */
-        }
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

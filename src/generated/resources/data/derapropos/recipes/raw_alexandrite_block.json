@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "aleaxndrite",
+  "ingredients": [
+    {
+      "item": "derpapropos:raw_alexandrite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "derpapropos:raw_alexandrite"
+  }
+}

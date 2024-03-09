@@ -4,10 +4,8 @@ package net.d1g1byt3.derpapropos.util;
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
