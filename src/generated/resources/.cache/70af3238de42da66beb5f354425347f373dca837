@@ -1,0 +1,5 @@
+// 1.20.1	2024-03-09T12:34:48.8217327	Block Tags
+f24285b3b24bcfb4e667284d9137c845539614e2 data/derpapropos/tags/blocks/ore_detector_valuables.json
+82d6801bfc447511ecf62e2a905915cc17cec5cb data/minecraft/tags/blocks/mineable/pickaxe.json
+220a1b95549da9823c185e061937d56d663bc8be data/minecraft/tags/blocks/needs_diamond_tool.json
+220a1b95549da9823c185e061937d56d663bc8be data/minecraft/tags/blocks/needs_iron_tool.json

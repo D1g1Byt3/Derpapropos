@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "derapropos:raw_alexandrite_block"
+        "recipe": "derpapropos:raw_alexandrite_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "derapropos:raw_alexandrite_block"
+      "derpapropos:raw_alexandrite_block"
     ]
   },
   "sends_telemetry_event": false

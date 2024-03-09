@@ -42,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(),
                 RecipeCategory.MISC, ModBlocks.RAW_ALEXANDRITE_BLOCK.get(),"derpapropos:raw_alexandrite",
-                "alexandrite", "derapropos:raw_alexandrite_block", "aleaxndrite");
+                "alexandrite", "derpapropos:raw_alexandrite_block", "alexandrite");
 
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite" );
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.50f, 100, "alexandrite" );
