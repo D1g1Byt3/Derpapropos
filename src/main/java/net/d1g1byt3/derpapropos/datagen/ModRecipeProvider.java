@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.spongepowered.asm.service.modlauncher.MixinServiceModLauncherBootstrap;
 
 import java.util.List;
 import java.util.function.Consumer;

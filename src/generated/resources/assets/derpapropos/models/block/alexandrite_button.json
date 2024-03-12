@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "derpapropos:block/alexandrite_block"
+  }
+}

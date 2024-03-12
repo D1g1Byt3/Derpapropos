@@ -12,10 +12,15 @@
 
   "block.derpapropos.alexandrite_block": "Block of Alexandrite",
   "block.derpapropos.raw_alexandrite_block": "Block of Raw Alexandrite",
+  "block.derpapropos.alexandrite_stairs": "Alexandrite Stairs",
+  "block.derpapropos.alexandrite_slab": "Alexandrite Slab",
+  "block.derpapropos.alexandrite_button": "Alexandrite Button",
+  "block.derpapropos.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
   "block.derpapropos.alexandrite_ore": "Alexandrite Ore",
   "block.derpapropos.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
   "block.derpapropos.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
   "block.derpapropos.nether_alexandrite_ore": "Nether Alexandrite Ore",
+
 
   "block.derpapropos.sound_block": "Sound Block",
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "derpapropos:block/alexandrite_slab"
+    },
+    "type=double": {
+      "model": "derpapropos:block/alexandrite_block"
+    },
+    "type=top": {
+      "model": "derpapropos:block/alexandrite_slab_top"
+    }
+  }
+}

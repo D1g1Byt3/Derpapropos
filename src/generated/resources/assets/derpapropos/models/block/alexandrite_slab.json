@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "derpapropos:block/alexandrite_block",
+    "side": "derpapropos:block/alexandrite_block",
+    "top": "derpapropos:block/alexandrite_block"
+  }
+}
