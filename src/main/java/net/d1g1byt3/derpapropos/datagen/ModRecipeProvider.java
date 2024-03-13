@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -35,6 +36,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SWORD.get())
+                .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
+                .pattern(" A ").pattern(" A ").pattern(" S ").unlockedBy("has_alexandrite",
+                        has(ModItems.ALEXANDRITE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_PICKAXE.get())
+                .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
+                .pattern("AAA").pattern(" S ").pattern(" S ").unlockedBy("has_alexandrite",
+                        has(ModItems.ALEXANDRITE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_AXE.get())
+                .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
+                .pattern(" AA").pattern(" SA").pattern(" S ").unlockedBy("has_alexandrite",
+                        has(ModItems.ALEXANDRITE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SHOVEL.get())
+                .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
+                .pattern(" A ").pattern(" S ").pattern(" S ").unlockedBy("has_alexandrite",
+                        has(ModItems.ALEXANDRITE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_HOE.get())
+                .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
+                .pattern(" AA").pattern(" S ").pattern(" S ").unlockedBy("has_alexandrite",
+                        has(ModItems.ALEXANDRITE.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
                 .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .unlockedBy("has_alexandrite_block", inventoryTrigger(ItemPredicate.Builder.item().
@@ -48,6 +79,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite" );
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.50f, 100, "alexandrite" );
     }
+
+    /*
+    protected static void pickaxeTool(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult ){
+
+    }
+     */
 
     protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTIme, @NotNull String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,

@@ -26,6 +26,12 @@
   "item.derpapropos.peat_brick": "Peat Brick",
   "item.derpapropos.raw_alexandrite": "Raw Alexandrite",
 
+  "item.derpapropos.alexandrite_sword": "Alexandrite Sword",
+  "item.derpapropos.alexandrite_pickaxe": "Alexandrite Pickaxe",
+  "item.derpapropos.alexandrite_axe": "Alexandrite Axe",
+  "item.derpapropos.alexandrite_shovel": "Alexandrite Shovel",
+  "item.derpapropos.alexandrite_hoe": "Alexandrite Hoe",
+
   "tooltip.derpapropos.ore_detector.tooltip": "Hold §eShift§r for More Info",
   "tooltip.derpapropos.ore_detector.tooltip.shift": "Right Click to Find Valuables!",
   "tooltip.derpapropos.sound_block.tooltip": "Hold §eShift§r for More Info",

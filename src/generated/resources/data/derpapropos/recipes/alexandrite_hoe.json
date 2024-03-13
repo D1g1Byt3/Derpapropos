@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "derpapropos:alexandrite"
+    },
+    "S": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    " AA",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "derpapropos:alexandrite_hoe"
+  },
+  "show_notification": true
+}
