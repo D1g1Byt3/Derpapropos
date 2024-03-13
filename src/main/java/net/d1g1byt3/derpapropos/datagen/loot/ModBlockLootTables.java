@@ -3,11 +3,10 @@ package net.d1g1byt3.derpapropos.datagen.loot;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -39,11 +38,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ALEXANDRITE_FENCE.get());
         this.dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
         this.dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+
+        this.add(ModBlocks.ALEXANDRITE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
 
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 }

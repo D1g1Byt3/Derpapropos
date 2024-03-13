@@ -1,34 +1,33 @@
 {
-  "creativetab.derpapropos_tab": "Derpapropos",
-
-  "item.derpapropos.ore_detector.no_valuables": "No Valuables Found!",
-  "item.derpapropos.ore_detector": "Ore Detector",
-  "item.derpapropos.peat_brick": "Peat Brick",
-
-  "item.derpapropos.alexandrite": "Alexandrite",
-  "item.derpapropos.raw_alexandrite": "Raw Alexandrite",
-  "item.derpapropos.kohlrabi": "Kohlrabi",
-  "item.derpapropos.coffee_drink": "Coffee Drink",
-
   "block.derpapropos.alexandrite_block": "Block of Alexandrite",
-  "block.derpapropos.raw_alexandrite_block": "Block of Raw Alexandrite",
-  "block.derpapropos.alexandrite_stairs": "Alexandrite Stairs",
-  "block.derpapropos.alexandrite_slab": "Alexandrite Slab",
+  "block.derpapropos.alexandrite_button": "Alexandrite Button",
+  "block.derpapropos.alexandrite_door": "Alexandrite Door",
+  "block.derpapropos.alexandrite_trapdoor": "Alexandrite Trapdoor",
   "block.derpapropos.alexandrite_fence": "Alexandrite Fence",
   "block.derpapropos.alexandrite_fence_gate": "Alexandrite Fence Gate",
-  "block.derpapropos.alexandrite_wall": "Alexandrite Wall",
-  "block.derpapropos.alexandrite_button": "Alexandrite Button",
-  "block.derpapropos.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
   "block.derpapropos.alexandrite_ore": "Alexandrite Ore",
+  "block.derpapropos.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
+  "block.derpapropos.alexandrite_slab": "Alexandrite Slab",
+  "block.derpapropos.alexandrite_stairs": "Alexandrite Stairs",
+  "block.derpapropos.alexandrite_wall": "Alexandrite Wall",
   "block.derpapropos.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
   "block.derpapropos.end_stone_alexandrite_ore": "End Stone Alexandrite Ore",
   "block.derpapropos.nether_alexandrite_ore": "Nether Alexandrite Ore",
-
+  "block.derpapropos.raw_alexandrite_block": "Block of Raw Alexandrite",
   "block.derpapropos.sound_block": "Sound Block",
 
-  "tooltip.derpapropos.ore_detector.tooltip.shift": "Right Click to Find Valuables!",
+  "creativetab.derpapropos_tab": "Derpapropos",
+
+  "item.derpapropos.alexandrite": "Alexandrite",
+  "item.derpapropos.coffee_drink": "Coffee Drink",
+  "item.derpapropos.kohlrabi": "Kohlrabi",
+  "item.derpapropos.ore_detector": "Ore Detector",
+  "item.derpapropos.ore_detector.no_valuables": "No Valuables Found!",
+  "item.derpapropos.peat_brick": "Peat Brick",
+  "item.derpapropos.raw_alexandrite": "Raw Alexandrite",
+
   "tooltip.derpapropos.ore_detector.tooltip": "Hold §eShift§r for More Info",
+  "tooltip.derpapropos.ore_detector.tooltip.shift": "Right Click to Find Valuables!",
   "tooltip.derpapropos.sound_block.tooltip": "Hold §eShift§r for More Info",
   "tooltip.derpapropos.sound_block.tooltip.shift": "Plays sound on walking, and right clicking"
-
 }

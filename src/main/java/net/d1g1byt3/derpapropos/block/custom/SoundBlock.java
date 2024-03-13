@@ -16,18 +16,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class SoundBlock extends Block {
     public SoundBlock(Properties pProperties) {
         super(pProperties);
     }
 
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public @NotNull InteractionResult use(@NotNull BlockState pState, Level pLevel, @NotNull BlockPos pPos,
+                                          @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         if (!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND){
             if(pPlayer.isCrouching()){
                 pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_BANJO.get(), SoundSource.BLOCKS, 1f, 1f);
@@ -42,7 +44,7 @@ public class SoundBlock extends Block {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+    public void appendHoverText(@NotNull ItemStack pStack, @Nullable BlockGetter pLevel, @NotNull List<Component> pTooltip, @NotNull TooltipFlag pFlag) {
         if(Screen.hasShiftDown()){
             pTooltip.add(Component.translatable("tooltip.derpapropos.sound_block.tooltip.shift"));
         } else {
@@ -53,7 +55,7 @@ public class SoundBlock extends Block {
     }
 
     @Override
-    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+    public void stepOn(Level pLevel, @NotNull BlockPos pPos, @NotNull BlockState pState, @NotNull Entity pEntity) {
         pLevel.playSound(pEntity, pPos, SoundEvents.NOTE_BLOCK_BIT.get(), SoundSource.BLOCKS, 1f, 1f);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
