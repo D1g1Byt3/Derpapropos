@@ -6,6 +6,7 @@ import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -50,10 +51,26 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
         blockItem(ModBlocks.ALEXANDRITE_TRAPDOOR, "_bottom");
 
-        customLamp();
+        customLamp(ModBlocks.ALEXANDRITE_LAMP.get(), AlexandriteLampBlock.CLICKED,"alexandrite_lamp");
 
     }
 
+
+    private void customLamp(Block block, BooleanProperty property, String name) {
+        getVariantBuilder(block).forAllStates(state -> {
+            String name_on = name + "_on";
+            if(state.getValue(property)) {
+
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name_on,
+                        new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + name_on)))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name,
+                        new ResourceLocation(DerpAproposMod.MOD_ID, "block/" +name)))};
+            }
+        });
+        simpleBlockItem(block, models().cubeAll(name,
+                new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + name + "_on")));
+    }
     private void customLamp() {
         getVariantBuilder(ModBlocks.ALEXANDRITE_LAMP.get()).forAllStates(state -> {
             if(state.getValue(AlexandriteLampBlock.CLICKED)) {

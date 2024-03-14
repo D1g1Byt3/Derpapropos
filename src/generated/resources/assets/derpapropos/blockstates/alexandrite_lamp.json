@@ -1,7 +1,7 @@
 {
   "variants": {
     "clicked=false": {
-      "model": "derpapropos:block/alexandrite_lamp_off"
+      "model": "derpapropos:block/alexandrite_lamp"
     },
     "clicked=true": {
       "model": "derpapropos:block/alexandrite_lamp_on"
