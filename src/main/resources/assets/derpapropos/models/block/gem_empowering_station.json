@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
-	"render_type": "minecraft:translucent",
+	"render_type": "minecraft:translucent_no_crumbling",
 	"textures": {
 		"1": "derpapropos:block/gem_empowering_station_texture",
 		"particle": "derpapropos:block/gem_empowering_station_texture"
