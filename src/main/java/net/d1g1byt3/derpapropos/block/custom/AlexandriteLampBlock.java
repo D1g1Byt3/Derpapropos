@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.NotNull;
 
 public class AlexandriteLampBlock extends Block {
 
@@ -20,9 +21,10 @@ public class AlexandriteLampBlock extends Block {
         this.registerDefaultState(this.defaultBlockState().setValue(CLICKED, false));
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public @NotNull InteractionResult use(@NotNull BlockState pState, Level pLevel, @NotNull BlockPos pPos,
+                                          @NotNull Player pPlayer, @NotNull InteractionHand pHand, @NotNull BlockHitResult pHit) {
         if(!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND){
             boolean curState = pState.getValue(CLICKED);
             pLevel.setBlock(pPos, pState.setValue(CLICKED, !curState), 3);

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "derpapropos:block/gem_empowering_station",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "derpapropos:block/gem_empowering_station"
+    },
+    "facing=south": {
+      "model": "derpapropos:block/gem_empowering_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "derpapropos:block/gem_empowering_station",
+      "y": 270
+    }
+  }
+}

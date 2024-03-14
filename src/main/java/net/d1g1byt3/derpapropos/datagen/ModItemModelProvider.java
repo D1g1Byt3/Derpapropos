@@ -7,7 +7,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,9 +40,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
 
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
+
+        complexBlock(ModBlocks.GEM_EMPOWERING_STATION.get());
     }
 
 
+    private void complexBlock(Block block){
+        withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath(), new ResourceLocation(DerpAproposMod.MOD_ID,
+                "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath()));
+    }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock){
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
@@ -55,15 +60,15 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("wall", new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock.get())).getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void simpleBlockItem(RegistryObject<Block> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(DerpAproposMod.MOD_ID, "item/" + item.getId().getPath()));
 
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void handheldItem(RegistryObject<Item> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(DerpAproposMod.MOD_ID, "item/" + item.getId().getPath()));
 

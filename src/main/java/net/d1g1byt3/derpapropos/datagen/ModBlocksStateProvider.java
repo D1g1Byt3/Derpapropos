@@ -53,6 +53,9 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         customLamp(ModBlocks.ALEXANDRITE_LAMP.get(), AlexandriteLampBlock.CLICKED,"alexandrite_lamp");
 
+        horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station")));
+
     }
 
 
@@ -71,7 +74,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         simpleBlockItem(block, models().cubeAll(name,
                 new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + name + "_on")));
     }
-    private void customLamp() {
+    /*(private void customLamp() {
         getVariantBuilder(ModBlocks.ALEXANDRITE_LAMP.get()).forAllStates(state -> {
             if(state.getValue(AlexandriteLampBlock.CLICKED)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("alexandrite_lamp_on",
@@ -83,7 +86,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
     });
         simpleBlockItem(ModBlocks.ALEXANDRITE_LAMP.get(), models().cubeAll("alexandrite_lamp_on",
                 new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + "alexandrite_lamp_on")));
-}
+}*/
 
 
     private void blockItem(RegistryObject<Block> blockRegistryObject,String appendix){
