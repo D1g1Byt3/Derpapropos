@@ -26,6 +26,8 @@ public class ModTags {
         public static final TagKey<Block> ORE_DETECTOR_VALUABLES = tag("ore_detector_valuables");
         public static final TagKey<Block> NEEDS_ALEXANDRITE_TOOL = tag("needs_alexandrite_tool");
 
+        public static final TagKey<Block> PAXEL_MINEABLE = tag("mineable/paxel");
+
         private static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(DerpAproposMod.MOD_ID, name));
         }

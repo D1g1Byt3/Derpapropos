@@ -3,6 +3,7 @@ package net.d1g1byt3.derpapropos.item;
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.item.custom.FuelItem;
 import net.d1g1byt3.derpapropos.item.custom.OreDetectorItem;
+import net.d1g1byt3.derpapropos.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,6 +36,8 @@ public class ModItems {
             () -> new ShovelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties()));
     public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
             () -> new HoeItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties()));
+    public static final RegistryObject<Item> ALEXANDRITE_PAXEL = ITEMS.register("alexandrite_paxel",
+            () -> new PaxelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties()));
 
 
     //Food Items
