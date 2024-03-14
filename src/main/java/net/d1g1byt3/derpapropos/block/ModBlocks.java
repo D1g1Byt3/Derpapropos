@@ -1,6 +1,7 @@
 package net.d1g1byt3.derpapropos.block;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
+import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
 import net.d1g1byt3.derpapropos.block.custom.SoundBlock;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -50,6 +51,10 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR), BlockSetType.IRON));
     public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_TRAPDOOR), BlockSetType.IRON));
+
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
 
     public static final RegistryObject<Block> ALEXANDRITE_PRESSURE_PLATE = registerBlock("alexandrite_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
