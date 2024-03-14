@@ -2,6 +2,7 @@ package net.d1g1byt3.derpapropos;
 
 import com.mojang.logging.LogUtils;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,6 +37,7 @@ public class DerpAproposMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
