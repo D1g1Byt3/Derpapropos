@@ -1,10 +1,17 @@
 package net.d1g1byt3.derpapropos.datagen.loot;
 
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.block.custom.ModCropBlock;
 import net.d1g1byt3.derpapropos.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
@@ -45,6 +52,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
 
         this.dropSelf(ModBlocks.GEM_EMPOWERING_STATION.get());
+
+        LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.KOHLRABI_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModCropBlock.AGE, 6));
+        this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(), ModItems.KOHLRABI.get(),
+                ModItems.KOHLRABI_SEEDS.get(), lootitemcondition$builder1));
 
     }
 

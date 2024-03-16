@@ -3,6 +3,7 @@ package net.d1g1byt3.derpapropos.block;
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
 import net.d1g1byt3.derpapropos.block.custom.GemEmpoweringStationBlock;
+import net.d1g1byt3.derpapropos.block.custom.ModCropBlock;
 import net.d1g1byt3.derpapropos.block.custom.SoundBlock;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -47,6 +48,9 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
+            () -> new ModCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR), BlockSetType.IRON));

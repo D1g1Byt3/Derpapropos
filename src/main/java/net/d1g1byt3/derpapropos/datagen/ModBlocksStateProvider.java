@@ -3,9 +3,11 @@ package net.d1g1byt3.derpapropos.datagen;
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
+import net.d1g1byt3.derpapropos.block.custom.ModCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -15,6 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
+import java.util.function.Function;
 
 public class ModBlocksStateProvider extends BlockStateProvider {
     public ModBlocksStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -53,10 +56,30 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         customLamp(ModBlocks.ALEXANDRITE_LAMP.get(), AlexandriteLampBlock.CLICKED,"alexandrite_lamp");
 
+        makeCrop(((ModCropBlock) ModBlocks.KOHLRABI_CROP.get()), "kohlrabi_stage", "kohlrabi_stage");
+
         horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station")));
 
     }
+
+    public void makeCrop(CropBlock block, String modelName, String textureName){
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName,textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName){
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
+        new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+
+
 
 
     private void customLamp(Block block, BooleanProperty property, String name) {

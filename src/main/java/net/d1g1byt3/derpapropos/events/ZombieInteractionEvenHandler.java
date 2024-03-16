@@ -1,6 +1,7 @@
 package net.d1g1byt3.derpapropos.events;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
+import net.d1g1byt3.derpapropos.block.entity.ModZombieVillagerEntity;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
@@ -103,31 +104,16 @@ public class ZombieInteractionEvenHandler {
      */
 
     protected static void playerInteractsWithZombieVillager(PlayerInteractEvent.EntityInteractSpecific event) {
-        ZombieVillager zombieVillager = (ZombieVillager) event.getTarget();
+        ZombieVillager zombieVillager = (ModZombieVillagerEntity) event.getTarget();
         ServerLevel level = (ServerLevel) event.getLevel();
         if (meetsConversionRequirements(zombieVillager)) {
             Zombie zombie = zombieVillager.convertTo(EntityType.ZOMBIE_VILLAGER, true);
 
-            //zombieVillager.finishConversion
+            ((ModZombieVillagerEntity) zombieVillager).finishConversion(level);
             event.getEntity().getItemInHand(event.getHand()).shrink(1);
         }
     }
 
-    /*public  <T extends ZombieVillager> void finishConversion(ServerLevel pServerLevel) {
-        Villager villager = this.convertTo(EntityType.VILLAGER, false);
 
-        for(EquipmentSlot equipmentslot : EquipmentSlot.values()) {
-            ItemStack itemstack = this.getItemBySlot(equipmentslot);
-            if (!itemstack.isEmpty()) {
-                if (EnchantmentHelper.hasBindingCurse(itemstack)) {
-                    villager.getSlot(equipmentslot.getIndex() + 300).set(itemstack);
-                } else {
-                    double d0 = (double)this.getEquipmentDropChance(equipmentslot);
-                    if (d0 > 1.0D) {
-                        this.spawnAtLocation(itemstack);
-                    }
-                }
-            }
-        } */
 
 }

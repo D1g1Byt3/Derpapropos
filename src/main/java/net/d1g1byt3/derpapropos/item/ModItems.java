@@ -1,6 +1,7 @@
 package net.d1g1byt3.derpapropos.item;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
+import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.item.custom.DataTabletItem;
 import net.d1g1byt3.derpapropos.item.custom.FuelItem;
 import net.d1g1byt3.derpapropos.item.custom.OreDetectorItem;
@@ -50,6 +51,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
