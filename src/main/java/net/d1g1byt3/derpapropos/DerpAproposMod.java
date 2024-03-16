@@ -5,6 +5,7 @@ import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.block.entity.ModBlockEntities;
 import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
+import net.d1g1byt3.derpapropos.item.ModItemProperties;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
 import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
@@ -86,6 +87,7 @@ public class DerpAproposMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             event.enqueueWork(()-> {
+                ModItemProperties.addCustomItemProperties();
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
             });
         }

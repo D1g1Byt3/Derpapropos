@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "derpapropos:item/data_tablet_off"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "derpapropos:on": 1
+      },
+      "model": "derpapropos:item/data_tablet_on"
+    }
+  ]
+}
