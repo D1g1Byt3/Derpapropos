@@ -1,6 +1,7 @@
 package net.d1g1byt3.derpapropos.item;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
+import net.d1g1byt3.derpapropos.item.custom.DataTabletItem;
 import net.d1g1byt3.derpapropos.item.custom.FuelItem;
 import net.d1g1byt3.derpapropos.item.custom.OreDetectorItem;
 import net.d1g1byt3.derpapropos.item.custom.PaxelItem;
@@ -46,6 +47,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COFFEE_DRINK)));
+
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
