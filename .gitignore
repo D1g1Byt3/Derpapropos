@@ -19,6 +19,7 @@ build
 
 # other
 eclipse
+run/logs/*.gz
 run
 
 # Files from Forge MDK
