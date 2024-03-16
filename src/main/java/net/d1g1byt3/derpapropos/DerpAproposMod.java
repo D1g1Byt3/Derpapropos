@@ -2,9 +2,13 @@ package net.d1g1byt3.derpapropos;
 
 import com.mojang.logging.LogUtils;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.block.entity.ModBlockEntities;
 import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItems;
+import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
+import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +30,7 @@ public class DerpAproposMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "derpapropos";
     // Directly reference a slf4j logger
+    @SuppressWarnings("unused")
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "derpapropos" namespace
 
@@ -38,6 +43,8 @@ public class DerpAproposMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEnchantments.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -74,10 +81,13 @@ public class DerpAproposMod
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+        @SuppressWarnings("CodeBlock2Expr")
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            event.enqueueWork(()-> {
+                MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
+            });
         }
     }
 }
