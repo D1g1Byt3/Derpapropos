@@ -57,6 +57,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         customLamp(ModBlocks.ALEXANDRITE_LAMP.get(), AlexandriteLampBlock.CLICKED,"alexandrite_lamp");
 
         makeCrop(((ModCropBlock) ModBlocks.KOHLRABI_CROP.get()), "kohlrabi_stage", "kohlrabi_stage");
+        makeCrop(((ModCropBlock) ModBlocks.COFFEE_CROP.get()), "coffee_bush_stage", "coffee_bush_stage");
 
         horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station")));

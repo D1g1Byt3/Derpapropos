@@ -52,6 +52,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
             () -> new ModCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
 
+    public static final RegistryObject<Block> COFFEE_CROP = BLOCKS.register("coffee_crop",
+            () -> new ModCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+
     public static final RegistryObject<Block> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_DOOR), BlockSetType.IRON));
     public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",

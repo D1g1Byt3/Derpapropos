@@ -46,6 +46,9 @@ public class ModItems {
     public static final RegistryObject<Item> KOHLRABI = ITEMS.register("kohlrabi",
             () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)));
 
+    public static final RegistryObject<Item> COFFEE_CHERRIES = ITEMS.register("coffee_cherries",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.COFFEE_CHERRIES)));
+
     public static final RegistryObject<Item> COFFEE_DRINK = ITEMS.register("coffee_drink",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COFFEE_DRINK)));
 
@@ -54,6 +57,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
             () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> COFFEE_SEED = ITEMS.register("coffee_seed",
+            () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

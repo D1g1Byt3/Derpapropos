@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "derpapropos:block/coffee_bush_stage0"
+    },
+    "age=1": {
+      "model": "derpapropos:block/coffee_bush_stage1"
+    },
+    "age=2": {
+      "model": "derpapropos:block/coffee_bush_stage2"
+    },
+    "age=3": {
+      "model": "derpapropos:block/coffee_bush_stage3"
+    },
+    "age=4": {
+      "model": "derpapropos:block/coffee_bush_stage4"
+    },
+    "age=5": {
+      "model": "derpapropos:block/coffee_bush_stage5"
+    },
+    "age=6": {
+      "model": "derpapropos:block/coffee_bush_stage6"
+    }
+  }
+}

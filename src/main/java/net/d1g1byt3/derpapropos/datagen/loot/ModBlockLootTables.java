@@ -58,6 +58,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(), ModItems.KOHLRABI.get(),
                 ModItems.KOHLRABI_SEEDS.get(), lootitemcondition$builder1));
 
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.COFFEE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ModCropBlock.AGE, 6));
+        this.add(ModBlocks.COFFEE_CROP.get(), this.createCropDrops(ModBlocks.COFFEE_CROP.get(), ModItems.COFFEE_CHERRIES.get(),
+                ModItems.COFFEE_SEED.get(), lootitemcondition$builder2));
+
     }
 
     @Override
