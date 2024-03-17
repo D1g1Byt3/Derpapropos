@@ -13,4 +13,4 @@
 
 
 ## Credits
-See [CREDITS.md](.github/CREDITS.md)
+See [CREDITS](CREDITS)
