@@ -1,4 +1,4 @@
-Some derpy additions.
+# Mod by D1g1Byt3 & H0n3yByt3 for Minecraft 1.20.1
 
-Credits to:
-Techern for use of Zombie interaction Event Handler. Used part of the code there, with some modifications of my own for mod purposes.
+Some derpy additions My wife and I thought would be nice to have in Minecraft.
+
