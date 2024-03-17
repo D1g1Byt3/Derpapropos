@@ -2,6 +2,7 @@ package net.d1g1byt3.derpapropos.datagen;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.block.crops.CoffeeBushBlock;
 import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
 import net.d1g1byt3.derpapropos.block.custom.ModCropBlock;
 import net.minecraft.data.PackOutput;
@@ -57,7 +58,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         customLamp(ModBlocks.ALEXANDRITE_LAMP.get(), AlexandriteLampBlock.CLICKED,"alexandrite_lamp");
 
         makeCrop(((ModCropBlock) ModBlocks.KOHLRABI_CROP.get()), "kohlrabi_stage", "kohlrabi_stage");
-        makeCrop(((ModCropBlock) ModBlocks.COFFEE_CROP.get()), "coffee_bush_stage", "coffee_bush_stage");
+        makeBushCrop(((ModCropBlock) ModBlocks.COFFEE_CROP.get()), "coffee_bush_stage", "coffee_bush_stage");
 
         horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station")));
@@ -71,10 +72,25 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
     }
 
+    public void makeBushCrop(CropBlock block, String modelName, String textureName){
+        Function<BlockState, ConfiguredModel[]> function = state -> states1(state, block, modelName,textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+
+    }
+
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName){
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
         new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    private ConfiguredModel[] states1(BlockState state, CropBlock block, String modelName, String textureName){
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(((ModCropBlock) block).getAgeProperty()),
+                new ResourceLocation(DerpAproposMod.MOD_ID, "block/" + textureName + state.getValue(((ModCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

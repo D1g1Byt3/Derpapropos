@@ -30,7 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COFFEE_CHERRIES);
 
         simpleItem(ModItems.KOHLRABI_SEEDS);
-        simpleItem(ModItems.COFFEE_SEED);
+        simpleItem(ModItems.COFFEE_CHERRY_SEEDS);
 
         //simpleItem(ModItems.DATA_TABLET);
 

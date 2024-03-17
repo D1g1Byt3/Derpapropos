@@ -58,7 +58,7 @@ public class ModItems {
     public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
             () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(), new Item.Properties()));
 
-    public static final RegistryObject<Item> COFFEE_SEED = ITEMS.register("coffee_seed",
+    public static final RegistryObject<Item> COFFEE_CHERRY_SEEDS = ITEMS.register("coffee_cherry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.COFFEE_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){

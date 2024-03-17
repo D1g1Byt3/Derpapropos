@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "crop": "derpapropos:block/coffee_bush_stage6"
+    "cross": "derpapropos:block/coffee_bush_stage6"
   }
 }

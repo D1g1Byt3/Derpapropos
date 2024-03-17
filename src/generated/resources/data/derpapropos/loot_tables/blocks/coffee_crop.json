@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "derpapropos:coffee_seed"
+              "name": "derpapropos:coffee_cherry_seeds"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "derpapropos:coffee_seed"
+          "name": "derpapropos:coffee_cherry_seeds"
         }
       ],
       "rolls": 1.0
