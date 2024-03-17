@@ -1,0 +1,15 @@
+name: Build
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+jobs:
+  build:
+    uses: D1g1Byt3/Derpapropos/.github/workflows/build.yml@v0.11.4
+    with:
+      mutation-testing: false
+      sonarqube: false
+    secrets: inherit
