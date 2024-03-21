@@ -3,6 +3,7 @@ package net.d1g1byt3.derpapropos;
 import com.mojang.logging.LogUtils;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.block.entity.ModBlockEntities;
+import net.d1g1byt3.derpapropos.block.entity.ModEntities;
 import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItemProperties;
@@ -10,6 +11,7 @@ import net.d1g1byt3.derpapropos.item.ModItems;
 import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
 import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -46,6 +48,7 @@ public class DerpAproposMod
         ModEnchantments.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -62,7 +65,12 @@ public class DerpAproposMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(()-> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRIES.get(), 0.25f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.20f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.COFFEE_CHERRY_SEEDS.get(), 0.15f);
+        });
     }
 
     // Add the example block item to the building blocks tab

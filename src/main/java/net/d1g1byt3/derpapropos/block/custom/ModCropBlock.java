@@ -18,6 +18,7 @@ public class ModCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
+
         return ModItems.KOHLRABI_SEEDS.get();
     }
 
