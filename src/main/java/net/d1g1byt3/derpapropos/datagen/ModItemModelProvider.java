@@ -48,6 +48,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
 
         complexBlock(ModBlocks.GEM_EMPOWERING_STATION.get());
+
+        withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
 

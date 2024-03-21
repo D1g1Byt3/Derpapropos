@@ -2,11 +2,13 @@ package net.d1g1byt3.derpapropos.item;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.entity.ModEntities;
 import net.d1g1byt3.derpapropos.item.custom.DataTabletItem;
 import net.d1g1byt3.derpapropos.item.custom.FuelItem;
 import net.d1g1byt3.derpapropos.item.custom.OreDetectorItem;
 import net.d1g1byt3.derpapropos.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -40,6 +42,10 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties()));
     public static final RegistryObject<Item> ALEXANDRITE_PAXEL = ITEMS.register("alexandrite_paxel",
             () -> new PaxelItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties()));
+
+
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5, new Item.Properties()));
 
 
     //Food Items

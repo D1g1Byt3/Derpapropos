@@ -3,16 +3,19 @@ package net.d1g1byt3.derpapropos;
 import com.mojang.logging.LogUtils;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.block.entity.ModBlockEntities;
-import net.d1g1byt3.derpapropos.block.entity.ModEntities;
+import net.d1g1byt3.derpapropos.entity.ModEntities;
 import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
+import net.d1g1byt3.derpapropos.entity.client.RhinoRenderer;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItemProperties;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
 import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -97,6 +100,8 @@ public class DerpAproposMod
             event.enqueueWork(()-> {
                 ModItemProperties.addCustomItemProperties();
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
+
+                EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             });
         }
     }
