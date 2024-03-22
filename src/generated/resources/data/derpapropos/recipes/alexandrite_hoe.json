@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " AA",
-    " S ",
-    " S "
+    "AA",
+    " S",
+    " S"
   ],
   "result": {
     "item": "derpapropos:alexandrite_hoe"

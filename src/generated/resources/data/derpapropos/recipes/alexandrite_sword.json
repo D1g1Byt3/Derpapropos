@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " A ",
-    " A ",
-    " S "
+    "A",
+    "A",
+    "S"
   ],
   "result": {
     "item": "derpapropos:alexandrite_sword"

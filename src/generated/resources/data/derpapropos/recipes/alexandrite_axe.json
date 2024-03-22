@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " AA",
-    " SA",
-    " S "
+    "AA",
+    "AS",
+    " S"
   ],
   "result": {
     "item": "derpapropos:alexandrite_axe"

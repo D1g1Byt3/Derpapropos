@@ -41,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SWORD.get())
                 .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
-                .pattern(" A ").pattern(" A ").pattern(" S ").unlockedBy("has_alexandrite",
+                .pattern("A").pattern("A").pattern("S").unlockedBy("has_alexandrite",
                         has(ModItems.ALEXANDRITE.get()))
                 .save(pWriter);
 
@@ -53,19 +53,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_AXE.get())
                 .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
-                .pattern(" AA").pattern(" SA").pattern(" S ").unlockedBy("has_alexandrite",
+                .pattern("AA").pattern("AS").pattern(" S").unlockedBy("has_alexandrite",
                         has(ModItems.ALEXANDRITE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_SHOVEL.get())
                 .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
-                .pattern(" A ").pattern(" S ").pattern(" S ").unlockedBy("has_alexandrite",
+                .pattern("A").pattern("S").pattern("S").unlockedBy("has_alexandrite",
                         has(ModItems.ALEXANDRITE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ALEXANDRITE_HOE.get())
                 .define('A', ModItems.ALEXANDRITE.get()).define('S', Tags.Items.RODS_WOODEN )
-                .pattern(" AA").pattern(" S ").pattern(" S ").unlockedBy("has_alexandrite",
+                .pattern("AA").pattern(" S").pattern(" S").unlockedBy("has_alexandrite",
                         has(ModItems.ALEXANDRITE.get()))
                 .save(pWriter);
 

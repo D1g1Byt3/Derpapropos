@@ -10,9 +10,9 @@
     }
   },
   "pattern": [
-    " A ",
-    " S ",
-    " S "
+    "A",
+    "S",
+    "S"
   ],
   "result": {
     "item": "derpapropos:alexandrite_shovel"
