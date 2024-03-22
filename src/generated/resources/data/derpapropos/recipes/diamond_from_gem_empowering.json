@@ -1,0 +1,12 @@
+{
+  "type": "derpapropos:gem_empowering",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:diamond"
+  }
+}

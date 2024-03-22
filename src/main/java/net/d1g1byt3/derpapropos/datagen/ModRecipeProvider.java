@@ -2,10 +2,13 @@ package net.d1g1byt3.derpapropos.datagen;
 
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
+import net.d1g1byt3.derpapropos.datagen.custom.GemEmpoweringRecipeBuilder;
 import net.d1g1byt3.derpapropos.item.ModItems;
+import net.d1g1byt3.derpapropos.recipe.GemEmpoweringRecipe;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -78,6 +81,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite" );
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.50f, 100, "alexandrite" );
+
+        new GemEmpoweringRecipeBuilder(ModItems.RAW_ALEXANDRITE.get(), ModItems.ALEXANDRITE.get(), 3)
+                .unlockedBy("has_raw_alexandrite", has(ModItems.RAW_ALEXANDRITE.get())).save(pWriter);
+
+        new GemEmpoweringRecipeBuilder(Items.COAL, Items.DIAMOND, 2)
+                .unlockedBy("has_diamond", has(Items.DIAMOND)).save(pWriter);
+
+
     }
 
     /*

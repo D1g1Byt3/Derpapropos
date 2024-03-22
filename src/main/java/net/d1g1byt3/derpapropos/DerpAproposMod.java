@@ -9,6 +9,7 @@ import net.d1g1byt3.derpapropos.entity.client.RhinoRenderer;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItemProperties;
 import net.d1g1byt3.derpapropos.item.ModItems;
+import net.d1g1byt3.derpapropos.recipe.ModRecipes;
 import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
 import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -52,6 +53,7 @@ public class DerpAproposMod
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

@@ -22,6 +22,7 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 import javax.annotation.Nullable;
@@ -61,7 +62,7 @@ public class ZombieInteractionEventHandler extends ZombieVillager {
     }
 
     @SubscribeEvent
-    public static void playerInteractsWithAnything(PlayerInteractEvent.EntityInteractSpecific event) {
+    public static void playerInteractsWithAnything(PlayerInteractEvent.@NotNull EntityInteractSpecific event) {
 
         //We only need to process this in the server side
         if (event.getSide().isClient()) {
@@ -112,7 +113,6 @@ public class ZombieInteractionEventHandler extends ZombieVillager {
     protected static void playerInteractsWithZombieVillager(PlayerInteractEvent.EntityInteractSpecific event) {
         ZombieVillager zombieVillager = (ZombieVillager) event.getTarget();
         if (meetsConversionRequirements(zombieVillager)) {
-            //zombieVillager.finishConversion((ServerLevel) event.getLevel());
             zombieVillager.startConverting(event.getEntity().getUUID(), 200);
             if (!event.getEntity().getAbilities().instabuild){
                 event.getEntity().getItemInHand(event.getHand()).shrink(1);
@@ -121,11 +121,9 @@ public class ZombieInteractionEventHandler extends ZombieVillager {
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag pCompound) {
+    public void addAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
-        VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData()).resultOrPartial(LOGGER::error).ifPresent((p_204072_) -> {
-            pCompound.put("VillagerData", p_204072_);
-        });
+        VillagerData.CODEC.encodeStart(NbtOps.INSTANCE, this.getVillagerData()).resultOrPartial(LOGGER::error).ifPresent((p_204072_) -> pCompound.put("VillagerData", p_204072_));
         if (this.tradeOffers != null) {
             pCompound.put("Offers", this.tradeOffers);
         }
@@ -137,13 +135,13 @@ public class ZombieInteractionEventHandler extends ZombieVillager {
         pCompound.putInt("ConversionTime", this.isConverting() ? this.villagerConversionTime : -1);
         if (this.conversionStarter != null) {
             pCompound.putUUID("ConversionPlayer", this.conversionStarter);
-        }
+                    }
 
         pCompound.putInt("Xp", this.villagerXp);
     }
 
     @Override
-    public void readAdditionalSaveData(CompoundTag pCompound) {
+    public void readAdditionalSaveData(@NotNull CompoundTag pCompound) {
         super.readAdditionalSaveData(pCompound);
         if (pCompound.contains("VillagerData", 10)) {
             DataResult<VillagerData> dataresult = VillagerData.CODEC.parse(new Dynamic<>(NbtOps.INSTANCE, pCompound.get("VillagerData")));

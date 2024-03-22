@@ -1,0 +1,12 @@
+{
+  "type": "derpapropos:gem_empowering",
+  "ingredients": [
+    {
+      "item": "derpapropos:raw_alexandrite"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "derpapropos:alexandrite"
+  }
+}
