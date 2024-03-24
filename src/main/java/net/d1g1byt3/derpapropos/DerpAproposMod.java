@@ -6,6 +6,8 @@ import net.d1g1byt3.derpapropos.block.entity.ModBlockEntities;
 import net.d1g1byt3.derpapropos.entity.ModEntities;
 import net.d1g1byt3.derpapropos.enchantment.ModEnchantments;
 import net.d1g1byt3.derpapropos.entity.client.RhinoRenderer;
+import net.d1g1byt3.derpapropos.fluid.ModFluidTypes;
+import net.d1g1byt3.derpapropos.fluid.ModFluids;
 import net.d1g1byt3.derpapropos.item.ModCreativeModTabs;
 import net.d1g1byt3.derpapropos.item.ModItemProperties;
 import net.d1g1byt3.derpapropos.item.ModItems;
@@ -13,6 +15,8 @@ import net.d1g1byt3.derpapropos.recipe.ModRecipes;
 import net.d1g1byt3.derpapropos.screen.GemEmpoweringStationScreen;
 import net.d1g1byt3.derpapropos.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -54,6 +58,8 @@ public class DerpAproposMod
         ModMenuTypes.register(modEventBus);
         ModEntities.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -102,6 +108,9 @@ public class DerpAproposMod
             event.enqueueWork(()-> {
                 ModItemProperties.addCustomItemProperties();
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
+
 
                 EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             });

@@ -32,7 +32,29 @@ public class ModCreativeModTabs {
                             }
                         }
 
-                        {
+                        output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
+
+                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
+
+                        output.accept(ModBlocks.ALEXANDRITE_STAIRS.get());
+                        output.accept(ModBlocks.ALEXANDRITE_SLAB.get());
+                        output.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
+                        output.accept(ModBlocks.ALEXANDRITE_FENCE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_WALL.get());
+                        output.accept(ModBlocks.ALEXANDRITE_DOOR.get());
+                        output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
+                        output.accept(ModBlocks.GEM_EMPOWERING_STATION.get());
+
+                       /* {
                             List<Block> blocks = ModBlocks.BLOCKS.getEntries()
                                     .stream()
                                     .map(RegistryObject::get).toList();
@@ -40,8 +62,9 @@ public class ModCreativeModTabs {
                                 output.accept(block);
                             }
                         }
-                    })
-                    .build());
+
+                        */
+                    }).build());
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);

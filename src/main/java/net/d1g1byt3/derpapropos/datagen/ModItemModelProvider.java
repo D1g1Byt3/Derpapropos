@@ -27,6 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ORE_DETECTOR);
         simpleItem(ModItems.PEAT_BRICK);
         simpleItem(ModItems.COFFEE_DRINK);
+        simpleItem(ModItems.SOAP_WATER_BUCKET);
         simpleItem(ModItems.COFFEE_CHERRIES);
 
         simpleItem(ModItems.KOHLRABI_SEEDS);

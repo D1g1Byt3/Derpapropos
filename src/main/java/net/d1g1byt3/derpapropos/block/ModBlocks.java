@@ -5,6 +5,7 @@ import net.d1g1byt3.derpapropos.block.custom.AlexandriteLampBlock;
 import net.d1g1byt3.derpapropos.block.custom.GemEmpoweringStationBlock;
 import net.d1g1byt3.derpapropos.block.custom.ModCropBlock;
 import net.d1g1byt3.derpapropos.block.custom.SoundBlock;
+import net.d1g1byt3.derpapropos.fluid.ModFluids;
 import net.d1g1byt3.derpapropos.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -66,6 +67,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
             () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<LiquidBlock> SOAP_WATER_BLOCK = BLOCKS.register("soap_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_SOAP_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
     public static final RegistryObject<Block> ALEXANDRITE_PRESSURE_PLATE = registerBlock("alexandrite_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,

@@ -3,6 +3,7 @@ package net.d1g1byt3.derpapropos.item;
 import net.d1g1byt3.derpapropos.DerpAproposMod;
 import net.d1g1byt3.derpapropos.block.ModBlocks;
 import net.d1g1byt3.derpapropos.entity.ModEntities;
+import net.d1g1byt3.derpapropos.fluid.ModFluids;
 import net.d1g1byt3.derpapropos.item.custom.DataTabletItem;
 import net.d1g1byt3.derpapropos.item.custom.FuelItem;
 import net.d1g1byt3.derpapropos.item.custom.OreDetectorItem;
@@ -29,6 +30,9 @@ public class ModItems {
             () -> new OreDetectorItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PEAT_BRICK = ITEMS.register("peat_brick",
             () -> new FuelItem(new Item.Properties(), 200));
+
+    public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
             () -> new SwordItem(ModToolTiers.ALEXANDRITE, 3, 3, new Item.Properties()));
